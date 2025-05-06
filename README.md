@@ -20,9 +20,8 @@ Diminuir significativamente os cancelamentos e faltas por desinformação, medo 
 
 ## 🧩 Funcionalidades
 
-- ✅ Chatbot com linguagem natural (via WhatsApp e App)
+- ✅ Chatbot com linguagem natural (via Telegram e App)
 - ✅ Vídeos curtos e explicativos sobre o preparo para consultas
-- ✅ Modo cuidador (acesso simplificado para terceiros autorizados)
 - ✅ Lembretes automatizados e humanizados (mensagem, voz, emoji)
 - ✅ Fluxo reduzido e guiado para acessar teleconsultas
 - ✅ Orientações com acessibilidade (voz, texto ampliado, Libras)
@@ -32,13 +31,14 @@ Diminuir significativamente os cancelamentos e faltas por desinformação, medo 
 
 ## 🧬 Tecnologias Utilizadas
 
-- React Native (App)
-- Node.js / Express (Backend)
-- Firebase / Supabase (Auth & Banco)
-- Twilio / WhatsApp API (Mensagens)
+- HTML (App)
+- JAVA / PYTHON (Backend)
+- ORACLE DATAMODELER (Banco de Dados)
 - Figma (Protótipo UX/UI)
-- GPT (Integração IA conversacional)
-- Google Cloud TTS / STT (voz)
+- GPT (IA)
+- WatsonX (Integração de voz)
+- Node-RED TTS / STT (voz)
+- 
 
 ---
 
@@ -82,11 +82,9 @@ Diminuir significativamente os cancelamentos e faltas por desinformação, medo 
 
 ## 👨‍💻 Time Desenvolvedor
 
-- Felipe Ferrete (UX/UI, PM, Full Stack)
-- [Nome do membro 2] (Dev Mobile / IA)
-- [Nome do membro 3] (Dev Backend / Integrações)
+- Felipe Ferrete 
+- Gustavo Bosak 
+- Nikolas Brisola
 
----
 
-## 📂 Estrutura do Repositório
 
