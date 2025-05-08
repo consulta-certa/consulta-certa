@@ -373,11 +373,12 @@
   }
   
   .home .navbar {
-    position: absolute;
     width: 339px;
     height: 49px;
-    top: 789px;
-    left: 30px;
+    background: #ffffff;
+
+    position: fixed;
+    bottom: 0;
   }
   
   .home .incio {

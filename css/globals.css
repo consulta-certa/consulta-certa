@@ -16,4 +16,39 @@ button:focus-visible {
 }
 a {
   text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  bottom: 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  
+  width: 100vw;
+  padding-block: 2vh;
+
+  background: #ffffff;
+
+}
+
+header li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+
+  height: 8vh;
+
+  & img:not(.vector-8) {
+    height: 100%;
+  }
+
+  & .vector-8 {
+    width: 100%;
+    padding-top: 1vh;
+  }
 }
