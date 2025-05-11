@@ -30,14 +30,18 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 90vw;
+    width: 80vw;
     height: 7vh;
-    padding-inline: 2vw;
+    padding-inline: 5vw;
     border-radius: 10px;
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.4);
 
     background: #fff;
     z-index: 1;
+}
+
+.topico img {
+    height: 1.5rem;
 }
 
 .descricao {

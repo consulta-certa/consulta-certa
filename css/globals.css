@@ -16,6 +16,12 @@ ul {
   list-style-type: none;
   color: #2D2D2D;
   font-size: 1.5rem;
+  font-family: "Roboto", Helvetica;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 header {
@@ -38,7 +44,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-evenly;
-  
+
   width: 100vw;
   padding-block: 2vh;
 
@@ -54,16 +60,19 @@ nav li {
 
   height: 8vh;
 
-/* Até arrumar as imagens */
-  & img:not(.vector-8) {
-    height: 100%;
+  & img {
+    height: 3.5rem;
   }
+}
 
-  & .vector-8 {
-    width: 100%;
-    padding-top: 1vh;
+.titulo {
+  margin: 3vh;
+  text-align: center;
+  font-size: 2rem;
+
+  & * {
+    margin-block: 2vh;
   }
-/* */
 }
 
 footer {
@@ -75,14 +84,15 @@ footer {
   padding-top: 1vh;
   gap: 2vh;
 
+  font-size: 1.5rem;
   text-align: center;
 }
 
 .linha {
-  height: 2px;
+  height: 1px;
   width: 90%;
 
   border-radius: 2px;
-  
+
   background: black;
 }
