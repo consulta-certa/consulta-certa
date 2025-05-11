@@ -1,27 +1,33 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+  Comentei isso porque tava mexendo com as fontes, e também acho que o professor falou pra não importar css mas não tenho certeza
+
+*/
+
+/* Fontes */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
 html {
   font-size: 62.5% !important;
 }
 
+/* Reset css */
 *,
 a,
 ul {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  
+  -webkit-font-smoothing: antialiased;
   text-decoration: none;
   list-style-type: none;
-  color: #2D2D2D;
   font-size: 1.5rem;
   font-family: "Roboto", Helvetica;
+  color: #2D2D2D;
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: 600;
 }
 
 header {
@@ -32,10 +38,13 @@ header {
   top: 0;
 }
 
+/* Temporário até ter imagem da logo, aí estiliza como imagem */
 .logo {
   font-size: 2rem;
 }
 
+
+/* Menu inferior da versão mobile */
 nav {
   position: fixed;
   bottom: 0;
@@ -65,16 +74,22 @@ nav li {
   }
 }
 
+/* Título inicial das páginas */
 .titulo {
-  margin: 3vh;
+  margin-top: 3vh;
   text-align: center;
   font-size: 2rem;
 
   & * {
     margin-block: 2vh;
   }
+
+  & p {
+    font-size: 2rem;
+  }
 }
 
+/* Footer */
 footer {
   display: flex;
   align-items: center;
@@ -84,15 +99,12 @@ footer {
   padding-top: 1vh;
   gap: 2vh;
 
-  font-size: 1.5rem;
   text-align: center;
 }
 
 .linha {
   height: 1px;
-  width: 90%;
-
+  width: 80%;
   border-radius: 2px;
-
   background: black;
 }

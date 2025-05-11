@@ -1,28 +1,21 @@
-#faq {
+#faq,
+.faq,
+.faqs,
+.descricao {
     display: flex;
     align-items: center;
     flex-flow: column;
+}
 
+#faq {
     min-height: 70vh;
     width: 100vw;
-    padding-top: 6vh;
-
-    padding-inline: 5vw;
+    padding: 6vh 5VW;
 }
 
 .faqs {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-
     gap: 1.5vh;
     margin-block: 3vh;
-}
-
-.faq {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
 }
 
 .topico {
@@ -45,10 +38,7 @@
 }
 
 .descricao {
-    display: flex;
     display: none;
-    align-items: center;
-    flex-flow: column;
 
     width: 90%;
     transform: translateY(-5vh);
@@ -57,7 +47,7 @@
     border-radius: 0 0 10px 10px;
 }
 
-video {
+#faq video {
     width:100%;
     height: 40vh;
     margin-top: 5vh;
