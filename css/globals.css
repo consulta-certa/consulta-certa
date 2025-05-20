@@ -26,31 +26,55 @@ ul {
   color: #2D2D2D;
 }
 
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  
+  height: 100vh;
+}
+
 h1 {
   font-size: 3rem;
 }
 
 header {
-  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   width: 100vw;
-  padding: 1vh 0 0 5vw;
-  position: fixed;
-  top: 0;
+  padding: 3vh 5vw 0 5vw;
 }
 
-/* Temporário até ter imagem da logo, aí estiliza como imagem */
+.logo-container,
+.options {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  font-size: 2rem;
+  height: 3.5rem;
+  padding-inline: 0.5rem;
 }
 
+.notificacoes {
+  height: 3rem;
+  padding-inline: 0.5rem;
+}
+
+.perfil {
+  height: 3.5rem;
+  width: 3.5rem;
+
+  background: #ffffff;
+  border: 0.2rem solid #2D2D2D;
+  border-radius: 100vh;
+}
 
 /* Menu inferior da versão mobile */
-nav {
-  position: fixed;
-  bottom: 0;
-}
 
-nav ul {
+.bottom-menu ul {
   display: flex;
   justify-content: space-evenly;
 
@@ -61,22 +85,23 @@ nav ul {
 
 }
 
-nav li {
+.bottom-menu a, .chatIcon {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: column;
-
-  height: 8vh;
 
   & img {
     height: 3.5rem;
   }
 }
 
+.chatIcon img {
+  height: 3.9rem;
+}
+
 /* Título inicial das páginas */
 .titulo {
-  margin-top: 3vh;
   text-align: center;
   font-size: 2rem;
 

@@ -8,9 +8,10 @@
 }
 
 #faq {
-    min-height: 70vh;
+    height: 75vh;
     width: 100vw;
-    padding: 6vh 5VW;
+    padding: 0 5VW;
+    overflow-y: scroll;
 }
 
 .faqs {
