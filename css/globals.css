@@ -1,11 +1,17 @@
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
   Comentei isso porque tava mexendo com as fontes, e também acho que o professor falou pra não importar css mas não tenho certeza
-
 */
 
 /* Fontes */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
+/* Variáveis */
+:root {
+  --preto: #2D2D2D;
+  --branco: #FDFFF3;
+}
+
+/* Ajuste de rem */
 html {
   font-size: 62.5% !important;
 }
@@ -17,21 +23,20 @@ ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   list-style-type: none;
   font-size: 1.5rem;
   font-family: "Roboto", Helvetica;
-  color: #2D2D2D;
+  color: var(--preto);
 }
+
 
 body {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  
-  height: 100vh;
 }
 
 h1 {
@@ -58,49 +63,28 @@ header {
   padding-inline: 0.5rem;
 }
 
-.notificacoes {
-  height: 3rem;
-  padding-inline: 0.5rem;
-}
-
 .perfil {
   height: 3.5rem;
   width: 3.5rem;
 
-  background: #ffffff;
-  border: 0.2rem solid #2D2D2D;
+  background: var(--branco);
+  border: 0.2rem solid var(--preto);
   border-radius: 100vh;
 }
 
-/* Menu inferior da versão mobile */
-
-.bottom-menu ul {
+/* Padronização das mains */
+main {
   display: flex;
-  justify-content: space-evenly;
-
-  width: 100vw;
-  padding-block: 2vh;
-
-  background: #ffffff;
-
-}
-
-.bottom-menu a, .chatIcon {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-flow: column;
-
-  & img {
-    height: 3.5rem;
-  }
+  height: 75vh;
+  width: 100vw;
+  padding: 0 5VW;
+  overflow-y: scroll;
 }
 
-.chatIcon img {
-  height: 3.9rem;
-}
 
-/* Título inicial das páginas */
+/* Padronização do card título inicial das páginas */
 .titulo {
   text-align: center;
   font-size: 2rem;
@@ -112,6 +96,64 @@ header {
   & p {
     font-size: 2rem;
   }
+}
+
+/* Menu inferior da versão mobile */
+.bottom-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100vw;
+  padding-block: 2vh;
+
+  background: var(--branco);
+}
+
+.bottom-menu a,
+.chatIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+}
+
+.chatIcon {
+  visibility: hidden;
+}
+
+.chatIcon img {
+  height: 3.9rem;
+}
+
+.icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-lembretes {
+  height: 3rem;
+  width: 3rem;
+  margin-inline: 0.5rem;
+
+  background-image: url('../images/icon_notificacao.png');
+}
+
+.icon-inicio {
+  background-image: url('../images/icon_inicio.png');
+}
+
+.icon-guia {
+  background-image: url('../images/icon_guia.png');
+}
+
+.icon-ajuda {
+  background-image: url('../images/icon_ajuda.png');
+}
+
+.icon-mais {
+  background-image: url('../images/icon_mais.png');
 }
 
 /* Footer */
@@ -133,3 +175,31 @@ footer {
   border-radius: 2px;
   background: black;
 }
+
+/* Localização */
+.active-inicio {
+  background-image: url('../images/icon_inicio-active.png');
+}
+
+.active-guia {
+  background-image: url('../images/icon_guia-active.png');
+}
+
+.active-ajuda {
+  background-image: url('../images/icon_ajuda-active.png');
+}
+
+.active-mais {
+  background-image: url('../images/icon_mais-active.png');
+}
+
+/* 
+
+ src="../images/icon_inicio.png" alt="Icone de casa"
+ src="../images/icon_guia.png" alt="Icone de guia"
+ src="../images/icon_ajuda.png" alt="Icone de ajuda"
+c="../images/icon_mais.png" alt="Icone de 3 barras"
+ src="../images/icon_chatbot.png" alt="Icone de robo"
+  alt="Sino de notificações"
+
+*/

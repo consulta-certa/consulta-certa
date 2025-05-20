@@ -5,50 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem somos</title>
+
     <link rel="stylesheet" href="../css/globals.css">
+
+    <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
     <header>
-        <p class="logo">||||| Consulta Certa</p>
-    </header>
-
-    <nav>
-        <ul>
+        <nav class="logo-container">
+            <a href="https://www.hc.fm.usp.br/hc/portal/" target="_blank">
+                <img class="logo" src="../images/logo_hc.svg" alt="Logo hospital das clínicas">
+            </a>
             <a href="../index.html">
-                <li>
-                    <img src="../images/icon_inicio.png" alt="Icone de casa" />
-                    <p>Início</p>
-                </li>
+                <img class="logo" src="../images/logo.svg" alt="Logo da página">
             </a>
-            <a href="./faq.html">
-                <li>
-                    <img src="../images/icon_guia.png" alt="Icone de guia" />
-                    <p>Guia</p>
-                </li>
-            </a>
-            <a href="#">
-                <li>
-                    <img src="../images/icon_ajuda.png" alt="Icone de ajuda" />
-                    <p>Ajuda</p>
-                </li>
-            </a>
-            </li>
-            </a>
-            <a href="#">
-                <li>
-                    <img src="../images/icon_mais.png" alt="Icone de 3 barras" />
-                    <p>Mais</p>
-                </li>
-            </a>
-            <a href="#">
-                <li>
-                    <img src="../images/icon_chatbot.png" alt="Icone de robo" />
-                    <p>Dona Certa</p>
-                </li>
-            </a>
-        </ul>
-    </nav>
+        </nav>
+        <nav class="options">
+            <div class="icon icon-lembretes"></div>
+            <figure class="perfil"></figure>
+        </nav>
+    </header>
 
     <main id="sobre">
         <h1>Quem somos</h1>
@@ -59,7 +36,7 @@
             </section>
             <video src=""></video>
         </section>
-        
+
         <section class="bloco">
             <section class="texto-sobre">
                 <h2>Nosso objetivo</h2>
@@ -77,26 +54,71 @@
                 <p>Texto</p>
             </section>
             <ul class="desenvolvedores">
-                    <li>
-                        <img src="../images/icon_guia.png" alt="">
+                <li>
+                    <img src="../images/icon_guia.png" alt="">
+                    <section>
+                        <h3>Nome</h3>
+                        <p>Turma</p>
+                        <p>RM</p>
                         <section>
-                            <h3>Nome</h3>
-                            <p>Turma</p>
-                            <p>RM</p>
-                            <section>
-                                <a href="https://github.com/">G</a>
-                                <a href="https://www.linkedin.com/">L</a>
-                            </section>
+                            <a href="https://github.com/">G</a>
+                            <a href="https://www.linkedin.com/">L</a>
                         </section>
-                    </li>
-                </ul>
+                    </section>
+                </li>
+            </ul>
         </section>
+
+        <footer>
+            <div class="linha"></div>
+            <p>Consulta Certa ©. Direitos reservados</p>
+        </footer>
     </main>
 
-    <footer>
-        <div class="linha"></div>
-        <p>Consulta Certa ©. Direitos reservados</p>
-    </footer>
+    <nav class="bottom-menu">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <div class="icon icon-inicio"></div>
+                    <p>Início</p>
+                </a>
+            </li>
+            <li>
+                <a href="./menuGuias.html">
+                    <div class="icon icon-guia"></div>
+                    <p>Guia</p>
+                </a>
+            </li>
+            <li>
+                <a href="./faq.html">
+                    <div class="icon icon-ajuda"></div>
+                    <p>Ajuda</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon icon-mais" sr></div>
+                    <p>Mais</p>
+                </a>
+            </li>
+            <li class="chatIcon">
+                <div class="icon icon-chatbot"></div>
+                <p>Dona Certa</p>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- API de Acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
