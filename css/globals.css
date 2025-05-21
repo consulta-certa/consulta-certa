@@ -9,6 +9,7 @@
 :root {
   --preto: #2D2D2D;
   --branco: #FDFFF3;
+  --primaria: #1E77D0;
 }
 
 /* Ajuste de rem */
@@ -39,8 +40,13 @@ body {
   justify-content: space-between;
 }
 
+/* Principais títulos e subtítulos */
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 header {
@@ -67,7 +73,7 @@ header {
   height: 3.5rem;
   width: 3.5rem;
 
-  background: var(--branco);
+  background: url('../images/icon_perfil.png') center/cover no-repeat;
   border: 0.2rem solid var(--preto);
   border-radius: 100vh;
 }
@@ -191,24 +197,40 @@ input {
 /* Footer */
 footer {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-flow: column;
+  background: var(--primaria);
 
-  height: 10vh;
-  padding-top: 1vh;
+  width: 100%;
+  padding: 4vh 4vw;
+  border-radius: 1rem;
   gap: 2vh;
 
   & p {
     font-size: 1.5rem;
     text-align: center;
+    color: var(--branco);
+  }
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 2vh;
+
+  & a {
+    font-size: 1.2rem;
+    color: var(--branco);
   }
 }
 
 .linha {
-  height: 1px;
-  width: 80%;
-  border-radius: 2px;
-  background: black;
+  height: 0.15rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: var(--branco);
 }
 
 /* // Localização

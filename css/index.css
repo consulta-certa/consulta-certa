@@ -71,6 +71,50 @@
 }
 
 .parcerias {
-    margin-block: 10vh;
+    flex-flow: column;
+    margin-block: 5vh;
     text-align: center;
+}
+
+.parcerias,
+.carrosselParcerias,
+.parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrosselParcerias {
+    width: 80vw;
+    gap: 10vw;
+    overflow-x: hidden;
+}
+
+.parceiros {
+    gap: 10vw;
+    animation: scrolling 20s linear infinite;
+
+    & a img {
+        height: 5rem;
+        object-fit: contain;
+    }
+}
+
+.line {
+    height: 0.2rem;
+    width: 80%;
+    margin-block: 4vh;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Animação do carrossel */
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
