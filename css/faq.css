@@ -4,10 +4,11 @@
     display: flex;
     align-items: center;
     flex-flow: column;
+    width: 94%;
 }
 
 .faqs {
-    gap: 1.5vh;
+    gap: 2vh;
     margin-block: 3vh;
 }
 
@@ -16,13 +17,11 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 80vw;
-    height: 7vh;
-    padding-inline: 5vw;
-    border-radius: 10px;
-    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding: 2vh 5vw;
+    border-radius: 1rem;
 
-    background: #fff;
+    background: var(--secundaria);
     z-index: 1;
 }
 
@@ -32,12 +31,13 @@
 
 .descricao {
     display: none;
-
-    width: 90%;
+    width: 94%;
     transform: translateY(-5vh);
-    gap: 1vh;
     padding: 2vh;
     border-radius: 0 0 10px 10px;
+    gap: 1vh;
+
+    background: var(--secundaria);
 }
 
 #faq video {
@@ -45,5 +45,32 @@
     height: 40vh;
     margin-top: 5vh;
 
-    background: black;
+    background: #000;
+}
+
+/* Faq aberta */
+.clicked .topico {
+    background: var(--primaria);
+
+    & p {
+        color: var(--branco);
+    }
+
+    & img {
+        content: url('../images/variant-icon_seta.png');
+    }
+}
+
+.clicked .descricao {
+    display: flex;
+}
+
+.botaoContato {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    
+    margin-block: 4vh 8vh;
+    gap: 2vh;
 }

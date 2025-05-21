@@ -10,6 +10,8 @@
   --preto: #2D2D2D;
   --branco: #FDFFF3;
   --primaria: #1E77D0;
+  --secundaria: #E6F7FF;
+  --botao: #1D52FF;
 }
 
 /* Ajuste de rem */
@@ -46,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 header {
@@ -89,7 +91,6 @@ main {
   overflow-y: scroll;
 }
 
-
 /* Padronização do card título inicial das páginas */
 .titulo {
   text-align: center;
@@ -102,6 +103,44 @@ main {
   & p {
     font-size: 2rem;
   }
+}
+
+/* Padronização de inputs */
+form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 1.5vh 4vw;
+  border-radius: 1vw;
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+  gap: 3vw;
+
+  & img {
+    height: 1.5rem;
+    opacity: 0.5;
+  }
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Padronização de botão */
+.botao {
+  padding: 2.5vh 8vw;
+  border-radius: 1rem;
+  font-weight: 700;
+
+  background: var(--botao);
+  color: var(--branco);
 }
 
 /* Menu inferior da versão mobile */
@@ -164,34 +203,6 @@ main {
 
 .icon-mais {
   background-image: url('../images/icon_mais.png');
-}
-
-/* Inputs */
-form {
-  width: 100%;
-}
-
-label {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  padding: 1.5vh 4vw;
-  border-radius: 1vw;
-  outline: 2px solid rgba(0, 0, 0, 0.4);
-  gap: 3vw;
-
-  & img {
-    height: 1.5rem;
-    opacity: 0.5;
-  }
-}
-
-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: none;
 }
 
 /* Footer */

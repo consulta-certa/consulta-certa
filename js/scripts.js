@@ -12,3 +12,11 @@ setTimeout(function () {
     document.head.appendChild(t);
 });
 //
+
+// Abrindo faq
+document.querySelectorAll(".faq").forEach(faq => {
+    faq.addEventListener('click', function () {
+        this.classList.toggle("clicked")
+    })
+})
+//
