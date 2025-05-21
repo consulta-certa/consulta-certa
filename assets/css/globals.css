@@ -81,10 +81,15 @@ header {
 }
 
 /* Padronização das mains */
-main {
+main,
+.container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-flow: column;
+}
+
+.container {
   height: 75vh;
   width: 100vw;
   padding: 0 5VW;

@@ -1,0 +1,27 @@
+.botoesGuia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 2vh 10vh;
+    gap: 4vw;
+}
+
+.botoesGuia img {
+    width: 30vw;
+    height:15vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.botoesGuia a {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    padding: 2vh 4vw;
+    border-radius: 2rem;
+    gap: 2vh;
+
+    text-align: center;
+    background: var(--secundaria);
+}
