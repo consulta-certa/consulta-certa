@@ -1,0 +1,33 @@
+.subtitulo {
+    font-weight: 600;
+    font-size: 1.5rem !important;
+    transform: translateY(-1.5rem);
+}
+
+.opcoes {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    margin-block: 2vh;
+    gap: 4vw;
+}
+
+.opcoes a {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    padding: 2vh 4vw;
+    border-radius: 2rem;
+    gap: 2vh;
+
+    text-align: center;
+    background: var(--secundaria);
+}
+
+.opcoes img {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}

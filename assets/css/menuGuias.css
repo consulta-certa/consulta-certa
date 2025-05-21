@@ -1,19 +1,19 @@
-.botoesGuia {
+.categorias {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-block: 2vh 10vh;
+    margin-block: 2vh;
     gap: 4vw;
 }
 
-.botoesGuia img {
+.categorias img {
     width: 30vw;
     height:15vh;
     object-fit: cover;
     object-position: top;
 }
 
-.botoesGuia a {
+.categorias a {
     display: flex;
     align-items: center;
     flex-flow: column;

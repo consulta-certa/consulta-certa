@@ -35,11 +35,11 @@ ul {
   color: var(--preto);
 }
 
-
 body {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  background: var(--branco);
 }
 
 /* Principais títulos e subtítulos */
@@ -51,7 +51,7 @@ h2 {
   font-size: 2.4rem;
 }
 
-header {
+.header-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +141,7 @@ input {
 /* Padronização de botão */
 .botao {
   padding: 2.5vh 8vw;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   font-weight: 700;
 
   background: var(--botao);
@@ -249,32 +249,42 @@ footer nav {
   background: var(--branco);
 }
 
-/* // Localização
-.active-inicio {
-  background-image: url('../images/icon_inicio-active.png');
+/* Animações */
+.botao:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
-.active-guia {
-  background-image: url('../images/icon_guia-active.png');
+
+/* Media queries */
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none;
+  }
+
+  .bottom-menu {
+    display: none;
+  }
 }
 
-.active-ajuda {
-  background-image: url('../images/icon_ajuda-active.png');
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Caso surja alguma coisa específica pra tablet (não acho que vai) */
 }
 
-.active-mais {
-  background-image: url('../images/icon_mais-active.png');
-} */
-
-
+/* Extra-Large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  /* Ajustar dimensões da página para desktop */
+}
 
 /* 
 
- src="../images/icon_inicio.png" alt="Icone de casa"
- src="../images/icon_guia.png" alt="Icone de guia"
- src="../images/icon_ajuda.png" alt="Icone de ajuda"
-c="../images/icon_mais.png" alt="Icone de 3 barras"
- src="../images/icon_chatbot.png" alt="Icone de robo"
+  src="../images/icon_inicio.png" alt="Icone de casa"
+  src="../images/icon_guia.png" alt="Icone de guia"
+  src="../images/icon_ajuda.png" alt="Icone de ajuda"
+  src="../images/icon_mais.png" alt="Icone de 3 barras"
+  src="../images/icon_chatbot.png" alt="Icone de robo"
   alt="Sino de notificações"
 
 */

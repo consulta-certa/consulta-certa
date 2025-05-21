@@ -14,7 +14,8 @@
     margin-block: 2vh;
 
     & img {
-        height: 35vh;
+        min-height: 35vh;
+        max-height: 45vh;
         width: 100%;
         object-position: right;
         object-fit: cover;
