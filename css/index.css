@@ -1,0 +1,76 @@
+#home {
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-bottom: 5vh;
+}
+
+.hero section {
+    position: relative;
+    margin-block: 2vh;
+
+    & img {
+        height: 35vh;
+        width: 100%;
+        object-position: right;
+        object-fit: cover;
+    }
+
+    & div {
+        height: 10%;
+        width: 100%;
+        position: absolute;
+
+        background-position: center;
+        background-size: contain;
+    }
+
+    & .figure {
+        background-image: url('../images/banner_margem-top.png');
+        top: 0;
+    }
+
+    & .figure-inversa {
+        background-image: url('../images/banner_margem-bottom.png');
+        bottom: 0;
+    }
+}
+
+.menu,
+.buttonHome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    flex-flow: wrap;
+    padding-block: 2vh;
+    gap: 2vh 4vw;
+}
+
+.buttonHome {
+    justify-content: center;
+    flex-flow: column;
+    flex-grow: 2;
+    flex-basis: 40%;
+    padding: 2.5vh 2vw;
+    border-radius: 1.5rem;
+    gap: 1.5vh;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+
+    min-height: 20vh;
+
+    & img {
+        height: 4.5rem;
+    }
+}
+
+.parcerias {
+    margin-block: 10vh;
+    text-align: center;
+}

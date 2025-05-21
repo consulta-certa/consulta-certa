@@ -27,7 +27,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "Roboto", Helvetica;
   color: var(--preto);
 }
@@ -49,7 +49,7 @@ header {
   align-items: center;
 
   width: 100vw;
-  padding: 3vh 5vw 0 5vw;
+  padding: 2vh 5vw;
 }
 
 .logo-container,
@@ -107,6 +107,10 @@ main {
   padding-block: 2vh;
 
   background: var(--branco);
+
+  & p {
+    font-size: 1.5rem;
+  }
 }
 
 .bottom-menu a,
@@ -156,6 +160,34 @@ main {
   background-image: url('../images/icon_mais.png');
 }
 
+/* Inputs */
+form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 1.5vh 4vw;
+  border-radius: 1vw;
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+  gap: 3vw;
+
+  & img {
+    height: 1.5rem;
+    opacity: 0.5;
+  }
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -166,7 +198,10 @@ footer {
   padding-top: 1vh;
   gap: 2vh;
 
-  text-align: center;
+  & p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
 .linha {
@@ -176,7 +211,7 @@ footer {
   background: black;
 }
 
-/* Localização */
+/* // Localização
 .active-inicio {
   background-image: url('../images/icon_inicio-active.png');
 }
@@ -191,7 +226,9 @@ footer {
 
 .active-mais {
   background-image: url('../images/icon_mais-active.png');
-}
+} */
+
+
 
 /* 
 
