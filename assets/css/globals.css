@@ -140,6 +140,7 @@ input {
 
 /* Padronização de botão */
 .botao {
+  margin-block: 2vh;
   padding: 2.5vh 8vw;
   border-radius: 1.5rem;
   font-weight: 700;
@@ -171,19 +172,12 @@ input {
   flex-flow: column;
 }
 
-.chatIcon {
-  visibility: hidden;
-}
-
-.chatIcon img {
-  height: 3.9rem;
-}
-
 .icon {
   height: 3.5rem;
-  width: 3.5rem;
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.icon-mais {
+  content: url('../images/variant-icon_mais.png');
 }
 
 .icon-lembretes {
@@ -191,23 +185,57 @@ input {
   width: 3rem;
   margin-inline: 0.5rem;
 
-  background-image: url('../images/icon_notificacao.png');
+  background: url('../images/icon_notificacao.png') center/contain no-repeat;
 }
 
-.icon-inicio {
-  background-image: url('../images/icon_inicio.png');
+/* Modal com o resto dos links */
+.modal {
+  display: flex;
+  visibility: hidden;
+  flex-flow: column;
+  align-items: center;
+  padding: 3vh 10vw 1vh 6vw;
+  gap: 1vh;
+
+  position: absolute;
+  bottom: 17vh;
+  right: 15vw;
+  z-index: 1;
+
+  background: var(--branco);
+  border-radius: 1rem;
+  box-shadow: 0 1vh 1rem rgba(0, 0, 0, 0.4);
+  
+  transition: visiblity 0.5 ease-in-out;
 }
 
-.icon-guia {
-  background-image: url('../images/icon_guia.png');
+.modal ul {
+  display: flex;
+  flex-flow: column;
+  gap: 2vh;
+  width: 100%;
+
+  & img {
+    margin-right: 1vh;
+  }
 }
 
-.icon-ajuda {
-  background-image: url('../images/icon_ajuda.png');
+.modal img {
+  height: 1.25rem;
 }
 
-.icon-mais {
-  background-image: url('../images/icon_mais.png');
+.modal .botao {
+  padding: 2vh 6vw;
+}
+
+.fechar {
+  background: var(--branco) url('../images/icon_fechar.png') center/2rem no-repeat;
+  padding: 2.5rem;
+  border-radius: 2rem 2rem 0 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
 }
 
 /* Footer */
@@ -253,6 +281,11 @@ footer nav {
 .botao:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+
+.fechar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 
