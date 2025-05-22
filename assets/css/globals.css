@@ -71,12 +71,20 @@ h2 {
   padding-inline: 0.5rem;
 }
 
+.options .icon {
+  height: 3rem;
+  width: 3rem;
+  margin-inline: 0.5rem;
+
+  background: url('../images/icon_lembretes.png') center/contain no-repeat;
+}
+
 .perfil {
   height: 3.5rem;
   width: 3.5rem;
 
   background: url('../images/icon_perfil.png') center/cover no-repeat;
-  border: 0.2rem solid var(--preto);
+  border: 0.2rem solid var(--primaria);
   border-radius: 100vh;
 }
 
@@ -164,8 +172,7 @@ input {
   }
 }
 
-.bottom-menu a,
-.chatIcon {
+.bottom-menu a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -176,16 +183,34 @@ input {
   height: 3.5rem;
 }
 
+.icon-inicio {
+  content: url('../images/variant-icon_inicio.png');
+}
+
+.icon-guia {
+  content: url('../images/variant-icon_guia.png');
+}
+
+.icon-ajuda {
+  content: url('../images/variant-icon_ajuda.png');
+}
+
 .icon-mais {
   content: url('../images/variant-icon_mais.png');
 }
 
 .icon-lembretes {
-  height: 3rem;
-  width: 3rem;
-  margin-inline: 0.5rem;
+  background: url('../images/variant-icon_lembretes.png') center/contain no-repeat !important;
+  transform: scale(1.1);
+}
 
-  background: url('../images/icon_notificacao.png') center/contain no-repeat;
+.icon-perfil {
+  background: url('../images/variant-icon_perfil.png') center/contain no-repeat;
+  transform: scale(1.1);
+}
+
+.chatIcon {
+  visibility: hidden;
 }
 
 /* Modal com o resto dos links */
@@ -205,7 +230,7 @@ input {
   background: var(--branco);
   border-radius: 1rem;
   box-shadow: 0 1vh 1rem rgba(0, 0, 0, 0.4);
-  
+
   transition: visiblity 0.5 ease-in-out;
 }
 
