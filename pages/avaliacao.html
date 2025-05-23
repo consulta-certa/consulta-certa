@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Avaliações</title>
 
-    <link rel="stylesheet" href="../assets/css/contato.css">
+    <link rel="stylesheet" href="../assets/css/avaliacao.css">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
     <script src="../assets/js/scripts.js" defer></script>
@@ -28,35 +28,47 @@
         </nav>
     </header>
 
-    <div class="container" id="contato">
+    <div class="container" id="avaliacao">
         <main>
             <section class="titulo">
-                <h1>Contato</h1>
-                <p>Envie uma mensagem para o Hospital das Clínicas</p>
+                <h1>Avaliações</h1>
+                <p>Envie sua avaliação para o Hospital das Clínicas</p>
             </section>
-            <section id="contato">
+            <section id="avaliacao">
                 <div>
-                    <form action="#" method="get" id="frmContato">
+                    <form action="#" method="get" id="frmAvaliacao">
                         <fieldset>
                             <legend>Digite sua informações:</legend>
+                            <div>
+                                <label for="idNome">Nome</label>
+                                <input type="text" name="nome" id="nome" placeholder="Nome">
+                            </div>
                             <div>
                                 <label for="idEmail">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Email">
                             </div>
                             <div>
-                                <label for="idNome">Nome</label>
-                                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+                                <label for="idTelefone">Telefone</label>
+                                <input type="tel" name="telefone" id="telefone" placeholder="Telefone">
                             </div>
                             <div>
-                                <label for="idAssunto">Assunto</label>
-                                <input type="text" name="assunto" id="assunto" placeholder="Assunto da mensagem">
+                                <label for="idConsulta">Consulta</label>
+                                <input type="text" name="consulta" id="consulta" placeholder="Consulta">
                             </div>
                             <div>
-                                <label for="idConteudo">Conteudo</label>
-                                <input type="text" name="contedo" id="conteudo" placeholder="O que você precisa...">
+                                <label for="idDataConsulta">Data da Consulta</label>
+                                <input type="date" name="dataConsulta" id="dataConsulta" placeholder="Data da consulta">
                             </div>
                             <div>
-                                <button type="submit" id="btnEnciar">ENVIAR</button>
+                                <label for="idComentario">Comentario</label>
+                                <input type="text" name="comentario" id="comentario" placeholder="Algum comentario?">
+                            </div>
+                            <div>
+                                <label for="idAvaliacao">Nota da consulta</label>
+                                <input type="number" name="avaliacao" id="avaliacao" min="0" max="10" placeholder="Nota da consulta">
+                            </div>
+                            <div>
+                                <button type="submit" id="btnEnciar">AVALIAR</button>
                             </div>    
                         </fieldset>
                     </form>

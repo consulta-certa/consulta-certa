@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+/* Variáveis */
+:root {
+  --preto: #2D2D2D;
+  --branco: #FDFFF3;
+  --primaria: #1E77D0;
+  --secundaria: #E6F7FF;
+  --botao: #1D52FF;
+}
+
+/* Ajuste de rem */
+html {
+  font-size: 62.5% !important;
+}
+
+/* Reset css */
+*,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.8rem;
+  font-family: "Roboto", Helvetica;
+  color: var(--preto);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: var(--branco);
+}
+
+/* Principais títulos e subtítulos */
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.logo-container,
+.options {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 3.5rem;
+  padding-inline: 0.5rem;
+}
+
+.options .icon {
+  height: 3rem;
+  width: 3rem;
+  margin-inline: 0.5rem;
+
+  background: url('../images/icon_lembretes.png') center/contain no-repeat;
+}
+
+.perfil {
+  height: 3.5rem;
+  width: 3.5rem;
+
+  background: url('../images/icon_perfil.png') center/cover no-repeat;
+  border: 0.2rem solid var(--primaria);
+  border-radius: 100vh;
+}
+
+/* Padronização das mains */
+main,
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+}
+
+.container {
+  height: 75vh;
+  width: 100vw;
+  padding: 0 5VW;
+  overflow-y: scroll;
+}
+
+/* Padronização do card título inicial das páginas */
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+
+  & * {
+    margin-block: 2vh;
+  }
+
+  & p {
+    font-size: 2rem;
+  }
+}
+
+/* Padronização de inputs */
+form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 1.5vh 4vw;
+  border-radius: 1vw;
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+  gap: 3vw;
+
+  & img {
+    height: 1.5rem;
+    opacity: 0.5;
+  }
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Padronização de botão */
+.botao {
+  margin-block: 2vh;
+  padding: 2.5vh 8vw;
+  border-radius: 1.5rem;
+  font-weight: 700;
+
+  background: var(--botao);
+  color: var(--branco);
+}
+
+/* Menu inferior da versão mobile */
+.bottom-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100vw;
+  padding-block: 2vh;
+
+  background: var(--branco);
+
+  & p {
+    font-size: 1.5rem;
+  }
+}
+
+.bottom-menu a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+}
+
+.icon {
+  height: 3.5rem;
+}
+
+.icon-inicio {
+  content: url('../images/variant-icon_inicio.png');
+}
+
+.icon-guia {
+  content: url('../images/variant-icon_guia.png');
+}
+
+.icon-ajuda {
+  content: url('../images/variant-icon_ajuda.png');
+}
+
+.icon-mais {
+  content: url('../images/variant-icon_mais.png');
+}
+
+.icon-lembretes {
+  background: url('../images/variant-icon_lembretes.png') center/contain no-repeat !important;
+  transform: scale(1.1);
+}
+
+.icon-perfil {
+  background: url('../images/variant-icon_perfil.png') center/contain no-repeat;
+  transform: scale(1.1);
+}
+
+.chatIcon {
+  visibility: hidden;
+}
+
+/* Modal com o resto dos links */
+.modal {
+  display: flex;
+  visibility: hidden;
+  flex-flow: column;
+  align-items: center;
+  padding: 3vh 10vw 1vh 6vw;
+  gap: 1vh;
+
+  position: absolute;
+  bottom: 17vh;
+  right: 15vw;
+  z-index: 1;
+
+  background: var(--branco);
+  border-radius: 1rem;
+  box-shadow: 0 1vh 1rem rgba(0, 0, 0, 0.4);
+
+  transition: visiblity 0.5 ease-in-out;
+}
+
+.modal ul {
+  display: flex;
+  flex-flow: column;
+  gap: 2vh;
+  width: 100%;
+
+  & img {
+    margin-right: 1vh;
+  }
+}
+
+.modal img {
+  height: 1.25rem;
+}
+
+.modal .botao {
+  padding: 2vh 6vw;
+}
+
+.fechar {
+  background: var(--branco) url('../images/icon_fechar.png') center/2rem no-repeat;
+  padding: 2.5rem;
+  border-radius: 2rem 2rem 0 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background: var(--primaria);
+
+  width: 100%;
+  padding: 4vh 4vw;
+  border-radius: 1rem;
+  gap: 2vh;
+
+  & p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--branco);
+  }
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 2vh;
+
+  & a {
+    font-size: 1.2rem;
+    color: var(--branco);
+  }
+}
+
+.linha {
+  height: 0.15rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: var(--branco);
+}
+
+/* Animações */
+.botao:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.fechar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+/* Media queries */
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none;
+  }
+
+  .bottom-menu {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Caso surja alguma coisa específica pra tablet (não acho que vai) */
+}
+
+/* Extra-Large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  /* Ajustar dimensões da página para desktop */
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+.titulo p {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+button {
+    align-self: flex-end;
+    padding: 0.8rem 1.5rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c5980;
+}
+
+@media (max-width: 600px) {
+    button {
+    width: 100%;
+    align-self: center;
+    }
+}
