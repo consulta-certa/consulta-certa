@@ -19,7 +19,7 @@ document.querySelectorAll(".faq").forEach(faq => {
     })
 })
 
-// Abrindo modal
+// Abrindo modal do menu inferior
 document.querySelectorAll('.botaoModal, .fechar, .fecharBotao').forEach(botao => {
     botao.addEventListener('click', function () {
         document.querySelector('.botaoModal img').classList.toggle('icon-mais')
@@ -29,7 +29,7 @@ document.querySelectorAll('.botaoModal, .fechar, .fecharBotao').forEach(botao =>
             if (modal.style.visibility !== 'visible') {
                 modal.style.visibility = 'visible'
                 this.style.transform = 'scale(1.1)'
-                
+
             } else {
                 modal.style.visibility = 'hidden'
                 this.style.transform = 'scale(1)'
@@ -61,9 +61,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+// Lembretes
+const modalLembretes = document.querySelector('.desmarcar-lockscreen')
+const lembretes = document.querySelector('.lista-lembretes')
+const lembretesPadrao = document.querySelector('.lembretes-padrao')
 
-// document.querySelectorAll('.icon').forEach(icon => {
-//     if (icon.dataset.page === currentPage) {
-//         icon.classList.add('active-icon');
-//     }
-// });
+// Criando lembrete
+document.querySelector('#criar-lembrete').addEventListener('click', function () {
+    lembretes.style.display = 'flex'
+    lembretesPadrao.style.display = 'none'
+})
+
+// Abrindo modal de desmarcar bilhete
+document.querySelector('.lembrete img').addEventListener('click', function () {
+    modalLembretes.style.display = 'flex'
+})
+
+document.querySelector('#desmarcar').addEventListener('click', function () {
+    modalLembretes.style.display = 'none'
+    lembretes.style.display = 'none'
+    lembretesPadrao.style.display = 'flex'
+})
+
+document.querySelectorAll('#voltar, .desmarcar-lockscreen').forEach(element => {
+    element.addEventListener('click', function () {
+        modalLembretes.style.display = 'none'
+    })
+})

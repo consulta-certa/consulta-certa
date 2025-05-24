@@ -7,6 +7,7 @@
     <title>Consulta Certa - Lembretes</title>
 
     <link rel="stylesheet" href="../assets/css/globals.css">
+    <link rel="stylesheet" href="../assets/css/lembretes.css">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
     <script src="../assets/js/scripts.js" defer></script>
@@ -32,9 +33,29 @@
         <main>
             <section class="titulo">
                 <h1>Lembretes</h1>
-                <p>Sem notificações no momento. Deseja programar um lembrete?</p>
+                <p class="lembretes-padrao">Sem notificações no momento. Deseja programar um lembrete?</p>
             </section>
-            <a href="#" class="botao">Criar Lembrete</a>
+            <ul class="lista-lembretes">
+                <li class="lembrete">
+                    <h3>Consulta</h3>
+                    <section>
+                        <p>Data</p>
+                        <img src="../assets/images/icon_fechar.png" alt="Ícone de letra X para fechar">
+                    </section>
+                </li>
+            </ul>
+
+            <div class="desmarcar-lockscreen">
+                <article class="desmarcar-lembrete">
+                    <h3>Tem certeza que quer desmarcar esse lembrete?</h3>
+                    <section>
+                        <a href="#" id="desmarcar" class="botao">Desmarcar</a>
+                        <a href="#" id="voltar" class="botao">Voltar</a>
+                    </section>
+                </article>
+            </div>
+
+            <a href="#" id="criar-lembrete" class="botao">Criar Lembrete</a>
         </main>
 
         <footer>
