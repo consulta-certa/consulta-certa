@@ -1,0 +1,61 @@
+.guiaHC,
+.guia1,
+.video1 {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 94%;
+    margin-top: 2rem;
+    
+}
+.passo01 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.passo01 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.passo01 a{
+    color: rgb(38, 0, 255);
+}
+
+
+.passo02 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.passo02 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.passo03 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.passo03 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
