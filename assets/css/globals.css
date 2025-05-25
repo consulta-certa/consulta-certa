@@ -1,7 +1,3 @@
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-  Comentei isso porque tava mexendo com as fontes, e também acho que o professor falou pra não importar css mas não tenho certeza
-*/
-
 /* Fontes */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
@@ -53,43 +49,6 @@ h2 {
 
 h3 {
   font-size: 2.1rem;
-}
-
-.header-mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100vw;
-  padding: 2vh 5vw;
-}
-
-.logo-container,
-.options {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 3.5rem;
-  padding-inline: 0.5rem;
-}
-
-.options .icon {
-  height: 3rem;
-  width: 3rem;
-  margin-inline: 0.5rem;
-
-  background: url('../images/icon_lembretes.png') center/contain no-repeat;
-}
-
-.perfil {
-  height: 3.5rem;
-  width: 3.5rem;
-
-  background: url('../images/icon_perfil.png') center/cover no-repeat;
-  border: 0.2rem solid var(--primaria);
-  border-radius: 100vh;
 }
 
 /* Padronização das mains */
@@ -177,192 +136,76 @@ input {
   color: var(--branco);
 }
 
-/* Menu inferior da versão mobile */
-.bottom-menu ul {
-  display: flex;
-  justify-content: space-evenly;
-
-  width: 100vw;
-  padding-block: 2vh;
-
-  background: var(--branco);
-
-  & p {
-    font-size: 1.5rem;
-  }
-}
-
-.bottom-menu a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: column;
-}
-
-.icon {
-  height: 3.5rem;
-}
-
-.icon-inicio {
-  content: url('../images/variant-icon_inicio.png');
-}
-
-.icon-guia {
-  content: url('../images/variant-icon_guia.png');
-}
-
-.icon-ajuda {
-  content: url('../images/variant-icon_ajuda.png');
-}
-
-.icon-mais {
-  content: url('../images/variant-icon_mais.png');
-}
-
-.icon-lembretes {
-  background: url('../images/variant-icon_lembretes.png') center/contain no-repeat !important;
-  transform: scale(1.1);
-}
-
-.icon-perfil {
-  background: url('../images/variant-icon_perfil.png') center/contain no-repeat;
-  transform: scale(1.1);
-}
-
-.chatIcon {
-  visibility: hidden;
-}
-
-/* Modal com o resto dos links */
-.modal {
-  display: flex;
-  visibility: hidden;
-  flex-flow: column;
-  align-items: center;
-  padding: 3vh 10vw 1vh 6vw;
-  gap: 1vh;
-
-  position: absolute;
-  bottom: 17vh;
-  right: 15vw;
-  z-index: 1;
-
-  background: var(--branco);
-  border-radius: 1rem;
-  box-shadow: 0 1vh 1rem rgba(0, 0, 0, 0.4);
-
-  transition: visiblity 0.5 ease-in-out;
-}
-
-.modal ul {
-  display: flex;
-  flex-flow: column;
-  gap: 2vh;
-  width: 100%;
-
-  & img {
-    margin-right: 1vh;
-  }
-}
-
-.modal img {
-  height: 1.25rem;
-}
-
-.modal .botao {
-  padding: 2vh 6vw;
-}
-
-.fechar {
-  background: var(--branco) url('../images/icon_fechar.png') center/2rem no-repeat;
-  padding: 2.5rem;
-  border-radius: 2rem 2rem 0 0;
-
-  position: absolute;
-  top: -1.5rem;
-  right: 0;
-}
-
-/* Footer */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  background: var(--primaria);
-
-  width: 100%;
-  padding: 4vh 4vw;
-  border-radius: 1rem;
-  gap: 2vh;
-
-  & p {
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--branco);
-  }
-}
-
-footer nav {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-top: 2vh;
-
-  & a {
-    font-size: 1.2rem;
-    color: var(--branco);
-  }
-}
-
-.linha {
-  height: 0.15rem;
-  width: 100%;
-  border-radius: 1rem;
-  background: var(--branco);
-}
-
-/* Animações */
 .botao:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.fechar:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+/* Media queries */
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 767px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .container {
+    padding: 0 5vw;
+  }
 }
 
-
-/* Media queries */
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
   .header-mobile {
-    display: none;
+    display: none !important;
+  }
+
+  .header-desktop {
+    display: flex !important;
+  }
+
+  .container {
+    height: 85vh;
+    padding: 5vh 15vw 0 15vw;
+  }
+
+  .carrosselParcerias {
+    width: 70vw;
   }
 
   .bottom-menu {
     display: none;
   }
+
+  footer {
+    justify-content: space-between !important;
+  }
+
+  footer nav {
+    width: fit-content !important;
+    max-width: 40%;
+    gap: 1rem;
+  }
+
+  .linha {
+    order: 1;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* Caso surja alguma coisa específica pra tablet (não acho que vai) */
+
+  .hero,
+  .hero section {
+    min-width: 85%;
+  }
 }
 
 /* Extra-Large devices (large laptops and desktops, 1300px and up) */
 @media (min-width: 1300px) {
-  /* Ajustar dimensões da página para desktop */
+  .hero img {
+    max-height: 55vh !important;
+  }
 }
 
-/* 
-
-  src="../images/icon_inicio.png" alt="Icone de casa"
-  src="../images/icon_guia.png" alt="Icone de guia"
-  src="../images/icon_ajuda.png" alt="Icone de ajuda"
-  src="../images/icon_mais.png" alt="Icone de 3 barras"
-  src="../images/icon_chatbot.png" alt="Icone de robo"
-  alt="Sino de notificações"
-
-*/
+/* Uso de !important devido a ordem de import de globals.css */

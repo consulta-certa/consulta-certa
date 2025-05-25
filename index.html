@@ -7,7 +7,7 @@
     <title>Consulta Certa - Início</title>
 
     <link rel="stylesheet" href="./assets/css/globals.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/home.css" /> -->
+    <link rel="stylesheet" href="./assets/css/headerFooter.css" />
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
@@ -15,6 +15,31 @@
 </head>
 
 <body>
+    <!-- Header desktop -->
+    <header class="header-desktop">
+        <nav class="logo-container">
+            <a href="https://www.hc.fm.usp.br/hc/portal/" target="_blank">
+                <img class="logo" src="./assets/images/logo_hc.svg" alt="Logo hospital das clínicas">
+            </a>
+            <a href="./index.html">
+                <img class="logo" src="./assets/images/logo.svg" alt="Logo da página">
+            </a>
+        </nav>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./pages/menuGuias.html">Guia</a></li>
+                <li><a href="./pages/faq.html">Ajuda</a></li>
+                <li><a href="./pages/sobre.html">Quem somos</a></li>
+                <li><a href="./pages/contato.html">Contato</a></li>
+                <li><a href="./pages/avaliacao.html">Avaliações</a></li>
+                <li> <a href="./pages/lembretes.html">Lembretes</a></li>
+                <li> <a href="./pages/perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header mobile -->
     <header class="header-mobile">
         <nav class="logo-container">
             <a href="https://www.hc.fm.usp.br/hc/portal/" target="_blank">
@@ -194,109 +219,3 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-
-    <!-- Versão figma -->
-    <!-- <div class="home">
-        <div class="overlap">
-            <div class="scroll-home">
-                <p class="text-wrapper">Você não está sozinho! Estamos aqui para te ajudar</p>
-                <div class="search-bar">
-                    <div class="overlap-group">
-                        <div class="div">Buscar...</div>
-                        <img class="vector" src="https://c.animaapp.com/xAMZg7pD/img/vector.svg" />
-                    </div>
-                </div>
-                <div class="rectangle"></div>
-                <div class="text-wrapper-2">Início</div>
-                <div class="boto">
-                    <div class="overlap-2">
-                        <div class="text-wrapper-3">Guia do Aplicativo</div>
-                        <img class="img" src="https://c.animaapp.com/xAMZg7pD/img/vector-1.svg" />
-                    </div>
-                </div>
-                <div class="overlap-wrapper">
-                    <div class="overlap-2">
-                        <div class="text-wrapper-4">Como será sua consulta</div>
-                        <img class="group" src="https://c.animaapp.com/xAMZg7pD/img/group@2x.png" />
-                    </div>
-                </div>
-                <div class="overlap-group-wrapper">
-                    <div class="overlap-2">
-                        <div class="text-wrapper-5">Profissionais de saúde</div>
-                        <img class="vector-2" src="https://c.animaapp.com/xAMZg7pD/img/vector-2.svg" />
-                    </div>
-                </div>
-                <div class="div-wrapper">
-                    <div class="overlap-2">
-                        <div class="text-wrapper-6">Cuidados<br />pós-consulta</div>
-                        <img class="vector-3" src="https://c.animaapp.com/xAMZg7pD/img/vector-3.svg" />
-                    </div>
-                </div>
-                <div class="boto-2">
-                    <div class="overlap-2">
-                        <div class="text-wrapper-6">Como foi sua teleconsulta?</div>
-                        <img class="vector-4" src="https://c.animaapp.com/xAMZg7pD/img/vector-4.svg" />
-                    </div>
-                </div>
-                <div class="boto-3">
-                    <div class="overlap-2">
-                        <p class="text-wrapper-6">UBS mais perto de mim</p>
-                        <img class="mask-group" src="https://c.animaapp.com/xAMZg7pD/img/mask-group@2x.png" />
-                    </div>
-                </div>
-                <div class="component">
-                    <div class="overlap-3">
-                        <p class="p">Consulta Certa ©. Direitos reservados</p>
-                    </div>
-                </div>
-                <div class="codicon-feedback">
-                    <img class="group-2" src="https://c.animaapp.com/xAMZg7pD/img/group-1@2x.png" />
-                </div>
-            </div>
-        </div>
-        <div class="logo">
-            <div class="rectangle-2"></div>
-            <div class="text-wrapper-7">Consulta Certa</div>
-        </div>
-        <div class="navbar">
-            <a href="./index.html">
-                <div class="incio">
-                    <div class="overlap-group-2">
-                        <img class="vector-5" src="https://c.animaapp.com/xAMZg7pD/img/vector-5.svg" />
-                        <div class="text-wrapper-8">Início</div>
-                    </div>
-                </div>
-            </a>
-            <a href="./pages/faq.html">
-                <div class="guia">
-                    <div class="overlap-4">
-                        <img class="vector-6" src="https://c.animaapp.com/xAMZg7pD/img/vector-6.svg" />
-                        <div class="text-wrapper-9">Guia</div>
-                    </div>
-                </div>
-            </a>
-            <div class="perfill">
-                <div class="overlap-4">
-                    <img class="vector-7" src="https://c.animaapp.com/xAMZg7pD/img/vector-7.svg" />
-                    <div class="text-wrapper-10">Perfil</div>
-                </div>
-            </div>
-            <div class="mais">
-                <img class="vector-8" src="https://c.animaapp.com/xAMZg7pD/img/vector-8.svg" />
-                <div class="text-wrapper-11">Mais</div>
-            </div>
-            <div class="chatbot">
-                <div class="chatbot-2">
-                    <div class="overlap-group-3">
-                        <img class="vector-9" src="https://c.animaapp.com/xAMZg7pD/img/vector-9.svg" />
-                        <img class="group-3" src="https://c.animaapp.com/xAMZg7pD/img/group-2@2x.png" />
-                    </div>
-                </div>
-                <div class="text-wrapper-12">ChatBot</div>
-            </div>
-        </div>
-    </div> -->
-</body>
-
-</html>

@@ -42,22 +42,35 @@ document.querySelectorAll('.botaoModal, .fechar, .fecharBotao').forEach(botao =>
 document.addEventListener('DOMContentLoaded', function () {
     const icons = document.querySelectorAll('.icon')
     const buttons = document.querySelectorAll('.bottom-menu a')
+    const links = document.querySelectorAll('.top-menu a')
 
     if (window.location.pathname.endsWith('lembretes.html')) {
         icons[0].classList.add('icon-lembretes')
+
     } else if (window.location.pathname.endsWith('index.html')) {
         icons[1].classList.add('icon-inicio')
         buttons[0].style.transform = 'scale(1.1)'
+
     } else if (window.location.pathname.endsWith('menuGuias.html')) {
         icons[2].classList.add('icon-guia')
         buttons[1].style.transform = 'scale(1.1)'
+
     } else if (window.location.pathname.endsWith('faq.html')) {
         icons[3].classList.add('icon-ajuda')
         buttons[2].style.transform = 'scale(1.1)'
+
     } else if (window.location.pathname.endsWith('perfil.html')) {
         document.querySelector('.perfil').classList.add('icon-perfil')
         buttons[2].style.transform = 'scale(1.1)'
         icons[0].classList.remove('icon-lembretes')
+    }
+
+    const hrefs = ['index.html', 'menuGuias.html', 'faq.html', 'sobre.html', 'contato.html', 'avaliacao.html', 'lembretes.html', 'perfil.html']
+
+    for (i = 0; i < hrefs.length; i++) {
+        if (window.location.pathname.endsWith(hrefs[i])) {
+            links[i].classList.add('ativado')
+        }
     }
 })
 
