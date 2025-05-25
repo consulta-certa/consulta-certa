@@ -61,30 +61,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
-// Lembretes
-const modalLembretes = document.querySelector('.desmarcar-lockscreen')
-const lembretes = document.querySelector('.lista-lembretes')
-const lembretesPadrao = document.querySelector('.lembretes-padrao')
+// Criando lembrete (confira configurações de segurança do Firefox para não limitar localStorage)
+document.addEventListener('DOMContentLoaded', function () {
+    const formLembretes = document.querySelector('#formLembretes')
+    if (formLembretes) {
+        formLembretes.addEventListener('submit', function (event) {
+            event.preventDefault()
 
-// Criando lembrete
-document.querySelector('#criar-lembrete').addEventListener('click', function () {
-    lembretes.style.display = 'flex'
-    lembretesPadrao.style.display = 'none'
-})
+            const nomeConsulta = document.getElementById('nomeConsulta').value;
+            const dataLembrete = document.getElementById('dataLembrete').value;
+            localStorage.setItem('nomeConsulta', nomeConsulta)
+            localStorage.setItem('dataLembrete', dataLembrete)
 
-// Abrindo modal de desmarcar bilhete
-document.querySelector('.lembrete img').addEventListener('click', function () {
-    modalLembretes.style.display = 'flex'
-})
+            window.location.href = './lembretes.html'
+        })
+    }
 
-document.querySelector('#desmarcar').addEventListener('click', function () {
-    modalLembretes.style.display = 'none'
-    lembretes.style.display = 'none'
-    lembretesPadrao.style.display = 'flex'
-})
+    if (document.querySelector('#lembretes')) {
+        const nomeConsulta = localStorage.getItem('nomeConsulta')
+        const dataLembrete = localStorage.getItem('dataLembrete')
 
-document.querySelectorAll('#voltar, .desmarcar-lockscreen').forEach(element => {
-    element.addEventListener('click', function () {
-        modalLembretes.style.display = 'none'
-    })
+        if (nomeConsulta && dataLembrete) {
+            const dateObject = new Date(dataLembrete)
+            const day = String(dateObject.getDate()).padStart(2, '0')
+            const month = String(dateObject.getMonth() + 1).padStart(2, '0')
+            const year = dateObject.getFullYear()
+
+            const formattedDate = `${day}/${month}/${year}`
+
+            document.querySelector('.lembrete h3').textContent = nomeConsulta
+            document.querySelector('.lembrete p').textContent = `Data: ${formattedDate}`
+
+            document.querySelector('.lista-lembretes').style.display = 'flex'
+            document.querySelector('.lembretes-padrao').style.display = 'none'
+        }
+    }
 })

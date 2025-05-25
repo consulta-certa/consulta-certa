@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta Certa - Lembretes</title>
+    <title>Consulta Certa - Criar Lembrete</title>
 
     <link rel="stylesheet" href="../assets/css/globals.css">
     <link rel="stylesheet" href="../assets/css/lembretes.css">
-    <link rel="stylesheet" href="../assets/css/entrada.css">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
     <script src="../assets/js/scripts.js" defer></script>
@@ -30,33 +29,47 @@
         </nav>
     </header>
 
-    <div class="container" id="lembretes">
+    <div class="container" id="criarLembrete">
         <main>
             <section class="titulo">
-                <h1>Lembretes</h1>
-                <p class="lembretes-padrao">Sem notificações no momento. Deseja programar um lembrete?</p>
+                <h1>Criar Lembrete</h1>
             </section>
-
-            <ul class="lista-lembretes">
-                <li class="lembrete">
-                    <h3>Consulta</h3>
-                    <section>
-                        <p>Data</p>
+            <form id="formLembretes" action="#">
+                <fieldset>
+                    <label for="nome">
+                        <img src="../assets/images/icon_nome.png" alt="Ícone de pessoa">
+                        <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+                    </label>
+                    <label for="email">
+                        <img src="../assets/images/icon_email.png" alt="Ícone de email">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </label>
+                    <label for="emailReserva">
+                        <img src="../assets/images/icon_email.png" alt="Ícone de email">
+                        <input type="emailReserva" name="emailReserva" id="emailReserva" placeholder="Mais um email">
+                    </label>
+                    <label for="telefone">
+                        <img src="../assets/images/icon_telefone.png" alt="Ícone de telefone">
+                        <input type="tel" name="telefone" id="telefone" placeholder="Número de telefone" required>
+                    </label>
+                    <label for="telefoneReserva">
+                        <img src="../assets/images/icon_telefone.png" alt="Ícone de telefone">
+                        <input type="tel" name="telefoneReserva" id="telefoneReserva"
+                            placeholder="Mais um número de telefone">
+                    </label>
+                    <label for="nomeConsulta">
+                        <img src="../assets/images/icon_consulta.png" alt="Ícone de primeiros socorros">
+                        <input type="text" name="nomeConsulta" id="nomeConsulta" placeholder="Consulta" required>
+                    </label>
+                    <label for="dataLembrete">
                         <img src="../assets/images/icon_data.png" alt="Ícone de calendario">
-                    </section>
-                </li>
-            </ul>
-            <a href="./criarLembrete.html" class="botao">Criar Lembrete</a>
+                        <input type="date" name="dataLembrete" id="dataLembrete" placeholder="Data da consulta"
+                            required>
+                    </label>
+                </fieldset>
+                <input type="submit" id="criar-lembrete" class="botao" value="Criar Lembrete">
+            </form>
         </main>
-
-        <footer>
-            <p>Consulta Certa ©. Direitos reservados</p>
-            <div class="linha"></div>
-            <nav>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Política de Privacidade</a>
-            </nav>
-        </footer>
     </div>
 
     <nav class="bottom-menu">
