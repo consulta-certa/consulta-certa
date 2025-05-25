@@ -1,0 +1,92 @@
+/* Lista dos desenvolvedores */
+ul.desenvolvedores {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start; /* alinha os cards à esquerda */
+}
+
+/* Card de cada integrante */
+ul.desenvolvedores li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+/*ul.desenvolvedores li section.G { 
+    align-self;     
+} tentei e tentei, nao consegui colocar sua foto p esquerda
+/*
+
+
+/* Foto do integrante */
+ul.desenvolvedores li img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 2px solid white;
+}
+
+/* Texto ao lado direito */
+ul.desenvolvedores li .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Nome do integrante */
+ul.desenvolvedores li .info h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primaria);
+  margin: 0;
+}
+
+/* RM e turma */
+ul.desenvolvedores li .info p {
+  font-size: 1.6rem;
+  color: var(--preto);
+  margin: 0;
+}
+
+/* Seção de ícones */
+ul.desenvolvedores li .info section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+ul.desenvolvedores li .info section a {
+  font-size: 2rem;
+  color: var(--primaria);
+  transition: transform 0.2s ease;
+}
+
+ul.desenvolvedores li .info section a:hover {
+  transform: scale(1.2);
+}
+
+.bloco figure {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bloco figure img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
