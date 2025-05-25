@@ -86,5 +86,24 @@ Diminuir significativamente os cancelamentos e faltas por desinformação, medo 
 - Gustavo Bosak 
 - Nikolas Brisola
 
+---
 
+## 📂 Estrutura de Diretórios
+```
+consulta-certa/
+│── index.html            # Arquivo HTML Principaç
+│── assets/               # Arquivos estaticos do projeto
+│   ├── images/           # Arquivos de imagem
+│   ├── css/              # Arquivos .css
+│   ├── js/               # Arquivos .js
+│   └── videos/           # Arquivos de vídeo
+│── pages/                # Demais páginas HTML
+└── README.md             # README do projeto
+```
 
+---
+
+## 🌐 Link para o repositório
+``
+[Repositório Remoto](https://github.com/consulta-certa/consulta-certa)
+``
