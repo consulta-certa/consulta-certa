@@ -110,3 +110,40 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 })
+
+
+// Atualizando perfil
+const formularios = document.querySelectorAll('#formDadosUsuario, #formEnderecoPerfil')
+
+for (i = 0; i < document.querySelectorAll('.containerDadosPerfil img').length; i++) {
+    document.querySelectorAll('.containerDadosPerfil img')[i].addEventListener('click', function () {
+        formularios[i].style.display = 'flex'
+    })
+}
+
+document.querySelectorAll('.containerDadosPerfil img').forEach(image => {
+    image.addEventListener('click', function () {
+        formularios.forEach(element => {
+            element.style.display = 'flex'
+        })
+    })
+})
+
+formularios.forEach(formulario => {
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        const newName = document.getElementById("name").value;
+        const newEmail = document.getElementById("email").value;
+        const newState = document.getElementById("state").value;
+
+        // Update display info
+        document.getElementById("displayName").textContent = newName;
+        document.getElementById("displayEmail").textContent = newEmail;
+        document.getElementById("displayState").textContent = newState;
+
+        formularios.forEach(element => {
+            element.style.display = 'none'
+        })
+    })
+})

@@ -1,0 +1,55 @@
+.containerDadosPerfil section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+    & img {
+        height: 2rem;
+    }
+
+    & img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        content: url('../images/variant-icon_lapis.png');
+    }
+}
+
+.containerDadosPerfil,
+#dadosUsuario,
+#dadosEndereco {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    max-width: 600px;
+    width: 90%;
+    gap: 2vh;
+}
+
+.containerDadosPerfil {
+    width: 100%;
+}
+
+.containerDadosPerfil {
+    margin-block: 5vh;
+}
+
+#dadosUsuario li,
+#dadosEndereco li {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 1.5vh 4vw;
+    border-radius: 1vw;
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    gap: 3vw;
+}
+
+#dadosUsuario p,
+#dadosEndereco p {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}

@@ -91,6 +91,7 @@ fieldset {
   outline: none;
   border: none;
   width: 100%;
+  max-width: 600px;
 }
 
 fieldset {
