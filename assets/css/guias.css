@@ -59,3 +59,12 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
+.video {
+    background: #000;
+}
+
+video {
+    height: 60vh;
+    width: 90vw;
+}
